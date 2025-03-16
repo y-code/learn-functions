@@ -1,0 +1,43 @@
+<div>
+  <h2>{{title}}</h2>
+
+  <ng-content />
+
+  @if (url == null) {
+    <p class="err">The URL attribute is missing</p>
+  }
+
+  <div>
+    <button (click)="try()">Try</button>
+    @if (isLoading) {
+      <span>Loading...</span>
+    }
+  </div>
+
+  <div>
+    <span>{{url}}</span>
+  </div>
+
+  @if (apiSpec4Display != null) {
+    <div><pre>{{apiSpec4Display}}</pre></div>
+  }
+  @if (result != null) {
+    <div>
+      <form [formGroup]="form">
+        <select #apiOptionsSelect formControlName="subQueryKey">
+          <option></option>
+          @for (subQuery of subQueryKeys; track subQueryKey) {
+            @if (subQuery != 'id') {
+              <option [selected]="subQuery == subQueryKey">{{subQuery}}</option>
+            }
+          }
+        </select>
+        <label>
+          <input type="checkbox" formControlName="isRepeated"/>
+          Auto Update
+        </label>
+      </form>
+    </div>
+    <div><pre>{{result}}</pre></div>
+  }
+</div>

@@ -1,0 +1,25 @@
+<app-try-function
+  title='Sample Azure Function'
+  [url]="url1"
+>
+  <form [formGroup]="form1">
+    <label>
+      Name:
+      <input type="text" formControlName="name" />
+    </label>
+  </form>
+</app-try-function>
+
+<hr/>
+
+<app-try-durable-function
+  title='Sample Durable Function'
+  [url]="url2"
+>
+  <form [formGroup]="form2">
+    <label>
+      Name:
+      <input type="text" formControlName="name" />
+    </label>
+  </form>
+</app-try-durable-function>

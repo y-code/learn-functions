@@ -1,0 +1,24 @@
+<div>
+  <h2>{{title}}</h2>
+
+  <ng-content />
+
+  @if (url == null) {
+    <p class="err">The URL attribute is missing</p>
+  }
+
+  <div>
+    <button (click)="try()">Try</button>
+  </div>
+
+  <div>
+    <span>{{url}}</span>
+  </div>
+
+  @if (isLoading) {
+    <div>Loading...</div>
+  }
+  @if (result != null) {
+    <div><pre>{{result}}</pre></div>
+  }
+</div>

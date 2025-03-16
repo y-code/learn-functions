@@ -1,0 +1,27 @@
+.err {
+  color: yellow;
+  background-color: red;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+pre {
+  background-color: lightgray;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow: auto;
+}
+
+button {
+  border-width: 0;
+  border-radius: 5px;
+  background-color: rgb(173, 216, 230);
+  padding: 6px 10px;
+
+  &:hover {
+    background-color: rgb(154, 211, 228);
+  }
+  &:active {
+    background-color: rgb(94, 196, 226);
+  }
+}
