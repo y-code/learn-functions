@@ -19,7 +19,7 @@ services:
       MSSQL_SA_PASSWORD: ${MSSQL_SA_PASSWORD}
       ACCEPT_EULA: Y
     volumes:
-      - "./data/service-bus/Config.json:/ServiceBus_Emulator/ConfigFiles/Config.json"
+      - "./config/service-bus/Config.json:/ServiceBus_Emulator/ConfigFiles/Config.json"
     ports:
       - "5672:5672"
     networks:

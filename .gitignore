@@ -6,6 +6,7 @@ local.settings.backup*.json
 local.settings.json
 
 .env
+data/
 
 # User-specific files
 *.suo
